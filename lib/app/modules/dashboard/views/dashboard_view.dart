@@ -1,4 +1,6 @@
 import 'package:appperpus_app/app/modules/profile/views/profile_view.dart';
+import 'package:appperpus_app/app/modules/searchbuku/controllers/searchbuku_controller.dart';
+import 'package:appperpus_app/app/modules/searchbuku/views/searchbuku_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -17,18 +19,16 @@ class DashboardView extends StatelessWidget {
           return Scaffold(
 
               body: SafeArea(
-                child: SafeArea(
-                  child: Center(
-                      child: IndexedStack(
-                        index: controller.tabIndex,
-                        children: [
-                          HomeView(),
-                          BookmarkView(),
-                          HomeView(),
-                          ProfileView(),
-                        ],
-                      )
-                  ),
+                child: Center(
+                    child: IndexedStack(
+                      index: controller.tabIndex,
+                      children: [
+                        HomeView(),
+                        SearchbukuView(),
+                        BookmarkView(),
+                        ProfileView(),
+                      ],
+                    )
                 ),
               ),
               bottomNavigationBar: CustomNavigationBar(

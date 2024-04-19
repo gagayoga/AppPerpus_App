@@ -57,6 +57,7 @@ class RegisterController extends GetxController {
             backgroundColor: primary,
             snackStyle: SnackStyle.FLOATING,
             colorText: Colors.white,
+            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             icon: const Icon(
               Icons.check_circle,
               color: Colors.white,
@@ -68,6 +69,7 @@ class RegisterController extends GetxController {
               "Gagal",
               "Registrasi Gagal, Coba daftar kembali",
               backgroundColor: Colors.red,
+              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               snackStyle: SnackStyle.FLOATING,
               colorText: Colors.white
           );
@@ -78,8 +80,9 @@ class RegisterController extends GetxController {
       loadinglogin(false);
       if (e.response != null) {
         if (e.response?.data != null) {
-          Get.snackbar("Sorry", "${e.response?.data['message']}",
+          Get.snackbar("Sorry", "${e.response?.data['Message']}",
               snackStyle: SnackStyle.FLOATING,
+              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
               backgroundColor: red, colorText: Colors.white, icon: const Icon(Icons.error_rounded, color: Colors.white,));
         }
       } else {
@@ -87,6 +90,7 @@ class RegisterController extends GetxController {
           backgroundColor: yellow,
           snackStyle: SnackStyle.FLOATING,
           colorText: Colors.white,
+            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           icon: const Icon(Icons.alarm_add_rounded, color: Colors.white,)
         );
       }
@@ -94,6 +98,7 @@ class RegisterController extends GetxController {
       loadinglogin(false);
       Get.snackbar("Error", e.toString(),
           snackStyle: SnackStyle.FLOATING,
+          margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           backgroundColor: red, colorText: Colors.white, icon: const Icon(Icons.error_rounded, color: Colors.white,));
     }
   }

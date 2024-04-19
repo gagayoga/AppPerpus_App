@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -43,9 +44,9 @@ class RegisterView extends GetView<RegisterController> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(bottom: width * 0.1),
-                            child: Image.asset(
-                              'lib/assets/logo/logo_login.png',
+                            padding: EdgeInsets.only(bottom: width * 0.15),
+                            child: SvgPicture.asset(
+                              'lib/assets/logo/logo_text.svg',
                             ),
                           ),
 
@@ -202,7 +203,7 @@ class RegisterView extends GetView<RegisterController> {
                           text: "Powered by ",
                           style: GoogleFonts.inter(
                             fontWeight: FontWeight.w500,
-                            fontSize: 8,
+                            fontSize: 12,
                             color: Colors.white, // Color for the fixed text
                           ),
                           children: [
@@ -210,7 +211,7 @@ class RegisterView extends GetView<RegisterController> {
                               text: "rdestaghifari",
                               style: GoogleFonts.inter(
                                 fontWeight: FontWeight.w600,
-                                fontSize: 8,
+                                fontSize: 12,
                                 color: primary, // Color for the username
                               ),
                             ),

@@ -1,6 +1,6 @@
 /// status : 200
 /// message : "Login Berhasil"
-/// data : {"id":1,"email":"pasya@smk.belajar.id","username":"Pasya","level":"User","token":"1|Sfe3Pb9YkBUowxFYdAiPgjFIWLYkLtZkwDqd17aDf60c8809"}
+/// data : {"id":1,"email":"pasyapradana@smk.belajar.id","Username":"Pasyaxexeee","nama_lengkap":"Pasyadcdceee","telepon":"098762345671","bio":"hsuxbdcubcubcc","level":"User","token":"9|nsK8bSMLxRDhldxNKXIGAnT1QkYiAbTC4OxTk5AE05d60868"}
 
 class ResponseLogin {
   ResponseLogin({
@@ -30,29 +30,41 @@ class ResponseLogin {
 }
 
 /// id : 1
-/// email : "pasya@smk.belajar.id"
-/// username : "Pasya"
+/// email : "pasyapradana@smk.belajar.id"
+/// Username : "Pasyaxexeee"
+/// nama_lengkap : "Pasyadcdceee"
+/// telepon : "098762345671"
+/// bio : "hsuxbdcubcubcc"
 /// level : "User"
-/// token : "1|Sfe3Pb9YkBUowxFYdAiPgjFIWLYkLtZkwDqd17aDf60c8809"
+/// token : "9|nsK8bSMLxRDhldxNKXIGAnT1QkYiAbTC4OxTk5AE05d60868"
 
 class DataLogin {
   DataLogin({
       this.id, 
       this.email, 
       this.username, 
+      this.namaLengkap, 
+      this.telepon, 
+      this.bio, 
       this.level, 
       this.token,});
 
   DataLogin.fromJson(dynamic json) {
     id = json['id'];
     email = json['email'];
-    username = json['username'];
+    username = json['Username'];
+    namaLengkap = json['nama_lengkap'];
+    telepon = json['telepon'];
+    bio = json['bio'];
     level = json['level'];
     token = json['token'];
   }
   int? id;
   String? email;
   String? username;
+  String? namaLengkap;
+  String? telepon;
+  String? bio;
   String? level;
   String? token;
 
@@ -60,7 +72,10 @@ class DataLogin {
     final map = <String, dynamic>{};
     map['id'] = id;
     map['email'] = email;
-    map['username'] = username;
+    map['Username'] = username;
+    map['nama_lengkap'] = namaLengkap;
+    map['telepon'] = telepon;
+    map['bio'] = bio;
     map['level'] = level;
     map['token'] = token;
     return map;

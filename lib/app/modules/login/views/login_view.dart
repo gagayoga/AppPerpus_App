@@ -3,6 +3,7 @@ import 'package:appperpus_app/app/components/customTextField.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -43,10 +44,9 @@ class LoginView extends GetView<LoginController> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(bottom: width * 0.1),
-                          child: Image.asset(
-                            'lib/assets/logo/logo_login.png',
-                            width: double.infinity,
+                          padding: EdgeInsets.only(bottom: width * 0.15),
+                          child: SvgPicture.asset(
+                            'lib/assets/logo/logo_text.svg',
                           ),
                         ),
 
@@ -186,7 +186,7 @@ class LoginView extends GetView<LoginController> {
                         text: "Powered by ",
                         style: GoogleFonts.inter(
                           fontWeight: FontWeight.w500,
-                          fontSize: 8,
+                          fontSize: 12,
                           color: Colors.white, // Color for the fixed text
                         ),
                         children: [
@@ -194,7 +194,7 @@ class LoginView extends GetView<LoginController> {
                             text: "rdestaghifari",
                             style: GoogleFonts.inter(
                               fontWeight: FontWeight.w600,
-                              fontSize: 8,
+                              fontSize: 12,
                               color: primary, // Color for the username
                             ),
                           ),
