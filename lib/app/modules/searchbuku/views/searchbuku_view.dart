@@ -153,7 +153,7 @@ class SearchbukuView extends GetView<SearchbukuController> {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 15),
                         child: SizedBox(
-                          height: 290, // Sesuaikan tinggi container sesuai kebutuhan Anda
+                          height: 310, // Sesuaikan tinggi container sesuai kebutuhan Anda
                           child: ListView.builder(
                             scrollDirection: Axis.horizontal,
                             itemCount: bukuList.length,
