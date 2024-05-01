@@ -15,12 +15,15 @@ class UpdateprofileController extends GetxController with StateMixin{
   final loading = false.obs;
   final loadingLogout = false.obs;
 
+  var isPasswordHidden = true.obs;
+
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController bioController = TextEditingController();
   final TextEditingController teleponController = TextEditingController();
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController namalengkapController = TextEditingController();
+  final TextEditingController password = TextEditingController();
 
   // Color
   final Color primary = const Color(0xFF5566FF);
@@ -62,6 +65,7 @@ class UpdateprofileController extends GetxController with StateMixin{
           teleponController.text = detailProfile.value!.telepon.toString();
           usernameController.text = detailProfile.value!.username.toString();
           namalengkapController.text = detailProfile.value!.namaLengkap.toString();
+          password.text = detailProfile.value!.password.toString();
           change(null, status: RxStatus.success());
         }
       } else {

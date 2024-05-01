@@ -1,6 +1,6 @@
 /// status : 201
 /// message : "Profil berhasil diperbarui"
-/// data : {"id":1,"email":"pasyapradana@smk.belajar.id","Username":"Pasyaxexeee","nama_lengkap":"Pasyadcdceee","telepon":"098762345671","bio":"hsuxbdcubcubcc","level":"User"}
+/// data : {"id":2,"email":"flowbook@smk.belajar.id","Username":"Pasyaxexeee","nama_lengkap":"Pasyadcdceee","telepon":"098762345671","bio":"Bismillah aja dulu","level":"User","password":"Password03@"}
 
 class ResponseUpdateProfile {
   ResponseUpdateProfile({
@@ -29,13 +29,14 @@ class ResponseUpdateProfile {
 
 }
 
-/// id : 1
-/// email : "pasyapradana@smk.belajar.id"
+/// id : 2
+/// email : "flowbook@smk.belajar.id"
 /// Username : "Pasyaxexeee"
 /// nama_lengkap : "Pasyadcdceee"
 /// telepon : "098762345671"
-/// bio : "hsuxbdcubcubcc"
+/// bio : "Bismillah aja dulu"
 /// level : "User"
+/// password : "Password03@"
 
 class DataUpdateProfile {
   DataUpdateProfile({
@@ -45,7 +46,8 @@ class DataUpdateProfile {
       this.namaLengkap, 
       this.telepon, 
       this.bio, 
-      this.level,});
+      this.level, 
+      this.password,});
 
   DataUpdateProfile.fromJson(dynamic json) {
     id = json['id'];
@@ -55,6 +57,7 @@ class DataUpdateProfile {
     telepon = json['telepon'];
     bio = json['bio'];
     level = json['level'];
+    password = json['password'];
   }
   int? id;
   String? email;
@@ -63,6 +66,7 @@ class DataUpdateProfile {
   String? telepon;
   String? bio;
   String? level;
+  String? password;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -73,6 +77,7 @@ class DataUpdateProfile {
     map['telepon'] = telepon;
     map['bio'] = bio;
     map['level'] = level;
+    map['password'] = password;
     return map;
   }
 

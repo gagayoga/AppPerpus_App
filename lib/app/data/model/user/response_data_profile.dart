@@ -1,6 +1,6 @@
 /// status : 200
 /// message : "DataUser profil user"
-/// data : {"id":1,"email":"pasyapradana@smk.belajar.id","Username":"Pasyaxexeee","nama_lengkap":"Pasyadcdceee","telepon":"098762345671","bio":"hsuxbdcubcubcc","level":"User"}
+/// data : {"id":1,"email":"ramadhan@smk.belajar.id","Username":"Ramadhan","nama_lengkap":"Ramadhan","telepon":"085768901232","bio":"Otw juara UCL 2024","level":"User","password":"$2y$12$rYQb6AGW4JM5s/cIChYLuu1B7Vmyysrj7t/Q9joAboFfZIEBKyzlu"}
 
 class ResponseDataProfile {
   ResponseDataProfile({
@@ -30,12 +30,13 @@ class ResponseDataProfile {
 }
 
 /// id : 1
-/// email : "pasyapradana@smk.belajar.id"
-/// Username : "Pasyaxexeee"
-/// nama_lengkap : "Pasyadcdceee"
-/// telepon : "098762345671"
-/// bio : "hsuxbdcubcubcc"
+/// email : "ramadhan@smk.belajar.id"
+/// Username : "Ramadhan"
+/// nama_lengkap : "Ramadhan"
+/// telepon : "085768901232"
+/// bio : "Otw juara UCL 2024"
 /// level : "User"
+/// password : "$2y$12$rYQb6AGW4JM5s/cIChYLuu1B7Vmyysrj7t/Q9joAboFfZIEBKyzlu"
 
 class DataUser {
   DataUser({
@@ -45,7 +46,8 @@ class DataUser {
       this.namaLengkap, 
       this.telepon, 
       this.bio, 
-      this.level,});
+      this.level, 
+      this.password,});
 
   DataUser.fromJson(dynamic json) {
     id = json['id'];
@@ -55,6 +57,7 @@ class DataUser {
     telepon = json['telepon'];
     bio = json['bio'];
     level = json['level'];
+    password = json['password'];
   }
   int? id;
   String? email;
@@ -63,6 +66,7 @@ class DataUser {
   String? telepon;
   String? bio;
   String? level;
+  String? password;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -73,6 +77,7 @@ class DataUser {
     map['telepon'] = telepon;
     map['bio'] = bio;
     map['level'] = level;
+    map['password'] = password;
     return map;
   }
 
